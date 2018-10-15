@@ -11,9 +11,9 @@
   <url>http://maven.apache.org</url>
   
   <parent>
-    <groupId>com.sysReg_restAPI</groupId>
-    <artifactId>multi_module_sysReg_restAPI</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+	    <groupId>com.sysReg_restAPI</groupId>
+	    <artifactId>restAPIApp</artifactId>
+	    <version>0.0.1-SNAPSHOT</version>
   </parent>
   
   <dependencies>
