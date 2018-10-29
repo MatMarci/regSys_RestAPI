@@ -25,8 +25,10 @@ export default {
   methods: {
     // Fetches posts when the component is created.
     callRestService () {
-      axios.get(`api/hello`)
+      // console.log('Before Axios.get')
+      axios.get('/api/hello')
         .then(response => {
+          // console.log('Before parsing')
           // JSON responses are automatically parsed.
           this.response = response.data
           console.log(response.data)
