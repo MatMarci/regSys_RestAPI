@@ -27,14 +27,14 @@ export default {
     callRestService () {
       // console.log('Before Axios.get')
       axios.get('/api/hello')
-        .then(response => {
+        .then(function (response) {
           // console.log('Before parsing')
           // JSON responses are automatically parsed.
           this.response = response.data
           console.log(response.data)
         })
-        .catch(e => {
-          this.errors.push(e)
+        .catch(function (error) {
+          this.errors.push(error)
         })
     }
   }

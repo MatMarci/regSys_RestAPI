@@ -4,6 +4,7 @@
   <groupId>org.springframework</groupId>
   <artifactId>backEnd</artifactId>
   <version>0.1.0</version>
+  <packaging>jar</packaging>
   
   <parent>
 	    <groupId>com.sysReg_restAPI</groupId>
@@ -15,7 +16,10 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		
+		<!-- backend dependencies -->
 		<rest-assured.version>3.1.1</rest-assured.version>
+		<postgresql.version>42.2.5</postgresql.version>
   </properties>
   
   <dependencies>
@@ -37,7 +41,26 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+
+		<!-- In-Memory database used for local development & testing -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+		</dependency>
 		
+		<!-- Switch back from Spring Boot 2.x standard HikariCP to Tomcat JDBC,
+		configured later in Heroku (see https://stackoverflow.com/a/49970142/4964553) -->
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jdbc</artifactId>
+		</dependency>
+
+		<!-- PostgreSQL used in Staging and Production environment, e.g. on Heroku -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+        </dependency>
+
 		<!-- testing -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
