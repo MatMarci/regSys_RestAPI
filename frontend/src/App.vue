@@ -2,18 +2,12 @@
   <div id="app">
     <img src="./assets/logo.png">
     <router-view/>
-    <Service/>
   </div>
 </template>
 
 <script>
-import Service from './components/Service.vue'
-
 export default {
-  name: 'App',
-  components: {
-    Service
-  }
+  name: 'App'
 }
 </script>
 

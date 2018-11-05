@@ -16,7 +16,7 @@
   
   <modules>
   	<module>backEnd</module>
-    <module>frontEnd</module>
+    <module>frontend</module>
   </modules>
   
 </project>
