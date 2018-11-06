@@ -88,7 +88,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Test Test Test - it works'
+      msg: 'Test Test Test - it works - after stable version in Dev branch'
     }
   }
 }
