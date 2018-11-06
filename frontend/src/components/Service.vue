@@ -3,7 +3,7 @@
     <h1>{{ msg }}</h1>
     <h2>REST service call results</h2>
 
-    <button class="Search_button" @click="callRestService()">CALL Spring Boot REST backend service</button>
+    <button class="Search_button" @click="callRestService()">CALL Spring Boot REST backend service - Test working serwer1</button>
 
     <h3>Backend response: {{ response }}</h3>
 
@@ -27,13 +27,13 @@ export default {
     callRestService () {
       // console.log('Before Axios.get')
       axios.get('/api/hello')
-        .then(function (response) {
+        .then(response => {
           // console.log('Before parsing')
           // JSON responses are automatically parsed.
           this.response = response.data
           console.log(response.data)
         })
-        .catch(function (error) {
+        .catch(error => {
           this.errors.push(error)
         })
     }
